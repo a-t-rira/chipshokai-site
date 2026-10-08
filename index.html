@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>チップ商会 公式サイト</title>
+<meta name="description" content="人間は社長ひとり、社員は全員AI。AI社員だけで会社を回せるのかを試している、チップ商会の公式サイトです。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://chipshokai.com/">
+<meta property="og:title" content="チップ商会 公式サイト">
+<meta property="og:description" content="人間は社長ひとり、社員は全員AI。AI社員の実験記録。">
+<meta property="og:image" content="https://chipshokai.com/img/office.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@chip_shokai">
+<link rel="icon" type="image/svg+xml" href="img/chip.svg">
+<style>*,*::before,*::after{box-sizing:border-box}html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+/* Layout: 紺のヒーロー（社名＋チップくん＋note導線）→ オフィス画面 → つくったもの → noteへの大きな導線。チップ商会の紺×金 */
+:root{
+  --bg:#EEF2FA; --panel:#FFFFFF; --ink:#0B1D45; --muted:#56668A; --line:#D3DCEE;
+  --accent:#1D3F9E; --navy:#0B1D45; --navyLine:#22335C; --gold:#F5C84B; --goldDeep:#D99A16; --goldInk:#3A2600; --onNavy:#F3F6FD; --onNavyMuted:#B8C4E0;
+  --f-display:"M PLUS Rounded 1c","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;
+  --f-body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#070F24; --panel:#0E1A38; --ink:#E4EAF8; --muted:#93A2C3; --line:#22335C; --accent:#8DB4FF; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#070F24; --panel:#0E1A38; --ink:#E4EAF8; --muted:#93A2C3; --line:#22335C; --accent:#8DB4FF; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.8}
+a{color:inherit}
+.in{max-width:960px;margin:0 auto;padding-inline:16px}
+
+/* ヒーロー */
+.hero{background:var(--navy);color:var(--onNavy);position:relative;overflow:hidden}
+.hero{background:var(--navy) url("img/hero.jpg") right center/cover no-repeat}
+.hero .in{position:relative;display:grid;grid-template-columns:1.3fr 1fr;align-items:center;gap:24px;padding-block:48px 52px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--f-display);font-weight:800;font-size:15px;letter-spacing:.12em;color:var(--gold)}
+.brand svg{width:30px;height:30px}
+.hero h1{font-family:var(--f-display);font-weight:800;font-size:clamp(32px,6.4vw,54px);line-height:1.25;margin:14px 0 0;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero .lead{margin:16px 0 0;color:var(--onNavyMuted);max-width:30em}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-display);font-weight:800;font-size:16px;text-decoration:none;border-radius:999px;padding:12px 22px;border:2px solid transparent;transition:transform .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.btn.gold{background:linear-gradient(180deg,var(--gold),var(--goldDeep));color:var(--goldInk);border-color:var(--goldInk)}
+.btn.ghost{color:var(--onNavy);border-color:var(--navyLine)}
+.chip{justify-self:center;width:min(300px,100%);height:auto;filter:drop-shadow(0 18px 30px rgba(0,0,0,.35));animation:bob 3.6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px)}}
+
+/* セクション */
+section.blk{padding-block:56px 8px}
+.eyebrow{font-family:var(--f-display);font-weight:800;font-size:13px;letter-spacing:.14em;color:var(--accent);margin:0}
+h2{font-family:var(--f-display);font-weight:800;font-size:clamp(24px,4vw,32px);line-height:1.35;margin:6px 0 0;text-wrap:balance}
+.desc{margin:12px 0 0;color:var(--muted);max-width:40em}
+figure{margin:24px 0 0}
+.shot{display:block;width:100%;height:auto;border-radius:16px;border:1px solid var(--line);background:var(--panel)}
+figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+.depts{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
+.depts li{font-size:13px;font-weight:700;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:3px 12px}
+.depts li.boss{background:color-mix(in srgb,var(--gold) 40%,var(--panel));border-color:var(--goldDeep)}
+
+/* つくったもの */
+.work{margin-top:24px;display:grid;grid-template-columns:220px 1fr;gap:28px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:20px}
+.work img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}
+.work .tx{min-width:0;display:grid;gap:10px;justify-items:start}
+.work h3{font-family:var(--f-display);font-weight:800;font-size:22px;line-height:1.4;margin:0}
+.work p{margin:0;color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:6px}
+.meta span{font-size:12px;font-weight:700;color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent);border-radius:999px;padding:1px 10px}
+.btn.solid{background:var(--accent);color:var(--panel)}
+.btn.solid:focus-visible{outline-color:var(--accent)}
+
+/* note導線 */
+.note{margin-top:56px;background:var(--navy);color:var(--onNavy);border-radius:24px;padding:32px 24px;display:grid;gap:14px;justify-items:start;position:relative;overflow:hidden}
+.note .eyebrow{color:var(--gold)}
+.note h2{color:var(--onNavy)}
+.note p{margin:0;color:var(--onNavyMuted);max-width:34em}
+.note .sub{font-size:14px}
+.note .sub a{color:var(--gold)}
+.sns{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:20px}
+.sn{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:12px 16px;text-decoration:none;transition:transform .15s ease,border-color .15s ease}
+.sn:hover{transform:translateY(-2px);border-color:var(--accent)}
+.sn:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 60%,transparent);outline-offset:3px}
+.sn .ic{width:44px;height:44px;border-radius:12px;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:17px}
+.sn .nm{display:grid;min-width:0;line-height:1.4}
+.sn b{font-family:var(--f-display);font-weight:800;font-size:16px}
+.sn small{font-size:13px;color:var(--muted);overflow-wrap:anywhere}
+.sn .go{color:var(--accent);font-weight:700}
+@media (prefers-reduced-motion: reduce){.sn{transition:none}.sn:hover{transform:none}}
+footer{padding-block:36px 40px;font-size:13px;color:var(--muted);text-align:center}
+
+@media (max-width:720px){
+  .hero .in{grid-template-columns:1fr;padding-block:36px 40px}
+  .chip{width:120px;grid-row:1;justify-self:start}
+  .hero{background-position:62% center}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,29,69,.35),rgba(11,29,69,.8))}
+  .work{grid-template-columns:1fr}
+  .work img{max-width:240px}
+}
+@media (prefers-reduced-motion: reduce){.chip{animation:none}.btn{transition:none}.btn:hover{transform:none}}
+</style>
+
+<header class="hero">
+  <div class="in">
+    <div>
+      <div class="brand">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#1D3F9E"/><g fill="#D99A16" stroke="#0B1D45" stroke-width="3"><rect x="30" y="10" width="8" height="12"/><rect x="46" y="10" width="8" height="12"/><rect x="62" y="10" width="8" height="12"/><rect x="30" y="78" width="8" height="12"/><rect x="46" y="78" width="8" height="12"/><rect x="62" y="78" width="8" height="12"/></g><rect x="20" y="20" width="60" height="60" rx="14" fill="#FFF7D6" stroke="#0B1D45" stroke-width="5"/><ellipse cx="40" cy="46" rx="5" ry="6.5" fill="#0B1D45"/><ellipse cx="60" cy="46" rx="5" ry="6.5" fill="#0B1D45"/><path d="M43 58 Q50 64 57 58" stroke="#0B1D45" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg>
+        CHIP SHOKAI
+      </div>
+      <h1>人間は社長ひとり。<br>社員は<em>全員AI</em>。</h1>
+      <p class="lead">チップ商会は、AI社員だけで会社を回せるのかを試している実験中の会社です。企画から記事づくり、チェック、公開まで、部署ごとのAI社員が担当しています。</p>
+      <div class="cta">
+        <a class="btn gold" href="https://note.com/chip_shokai/m/md7acb455b0dc" target="_blank" rel="noopener">noteで実験記録を読む →</a>
+        <a class="btn ghost" href="https://shindan.chipshokai.com" target="_blank" rel="noopener">AI診断をやってみる</a>
+      </div>
+    </div>
+    <img class="chip" src="img/chip.svg" alt="チップ商会のマスコット、チップくん" width="300" height="300">
+  </div>
+</header>
+
+<main class="in">
+  <section class="blk" aria-labelledby="h-office">
+    <p class="eyebrow">OFFICE</p>
+    <h2 id="h-office">AI社員が働くオフィス</h2>
+    <p class="desc">社長が指示を出すと、各部署のAI社員が動き出します。どの部署が何をしているかは、このオフィス画面で見えるようにしています。</p>
+    <figure>
+      <img class="shot" src="img/office.jpg" alt="チップ商会のオフィス画面。社長室を中心に、各部署のAI社員キャラクターが机に向かっている" width="1400" height="912">
+      <figcaption>実際に使っているオフィス画面のスクリーンショット</figcaption>
+    </figure>
+    <ul class="depts" aria-label="部署一覧">
+      <li class="boss">社長室</li><li>経営企画部</li><li>マーケティング部</li><li>企画部</li><li>制作部</li><li>品質管理部</li><li>法務・コンプライアンス部</li><li>資料室</li><li>運用・保守サポート部</li><li>広報部</li><li>コーポレート部</li>
+    </ul>
+  </section>
+
+  <section class="blk" aria-labelledby="h-works">
+    <p class="eyebrow">WORKS</p>
+    <h2 id="h-works">つくったもの</h2>
+    <article class="work">
+      <img src="img/shindan.jpg" alt="AI診断アプリのトップ画面。吹き出しに質問が書かれ、王冠をかぶったチップくんが立っている" width="560" height="1085" loading="lazy">
+      <div class="tx">
+        <h3>あなたの仕事、AIに何%任せられる？</h3>
+        <p>15の質問に答えると、あなたの仕事をどれくらいAIに任せられるかがわかる診断です。チップくんが結果を教えてくれます。</p>
+        <div class="meta"><span>全15問</span><span>約3分</span></div>
+        <a class="btn solid" href="https://shindan.chipshokai.com" target="_blank" rel="noopener">診断をはじめる →</a>
+      </div>
+    </article>
+  </section>
+
+  <section class="note" aria-labelledby="h-note">
+    <p class="eyebrow">NOTE</p>
+    <h2 id="h-note">実験の記録は、noteで連載中</h2>
+    <p>社長とAI社員のやりとりを、毎回の「今回わかったこと」と一緒にまとめています。</p>
+    <a class="btn gold" href="https://note.com/chip_shokai/m/md7acb455b0dc" target="_blank" rel="noopener">マガジン「チップ商会の実験記録」を読む →</a>
+    <p class="sub">記事一覧は <a href="https://note.com/chip_shokai" target="_blank" rel="noopener">note.com/chip_shokai</a></p>
+  </section>
+
+  <section class="blk" aria-labelledby="h-sns">
+    <p class="eyebrow">FOLLOW</p>
+    <h2 id="h-sns">チップ商会のSNS</h2>
+    <p class="desc">日々の様子や新しい記事のお知らせを発信しています。</p>
+    <div class="sns">
+      <a class="sn" href="https://x.com/chip_shokai" target="_blank" rel="noopener">
+        <span class="ic" aria-hidden="true">X</span>
+        <span class="nm"><b>X</b><small>@chip_shokai</small></span>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
+      <a class="sn" href="https://www.instagram.com/chip_shokai/" target="_blank" rel="noopener">
+        <span class="ic" aria-hidden="true">IG</span>
+        <span class="nm"><b>Instagram</b><small>@chip_shokai</small></span>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
+      <a class="sn" href="https://note.com/chip_shokai" target="_blank" rel="noopener">
+        <span class="ic" aria-hidden="true">n</span>
+        <span class="nm"><b>note</b><small>chip_shokai</small></span>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
+      <a class="sn" href="https://chipshokai.substack.com" target="_blank" rel="noopener">
+        <span class="ic" aria-hidden="true">S</span>
+        <span class="nm"><b>Substack</b><small>chipshokai</small></span>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>© チップ商会</footer>
+
+</body>
+</html>
