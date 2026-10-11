@@ -75,6 +75,41 @@ figcaption{font-size:13px;color:var(--muted);margin-top:8px}
 .btn.solid{background:var(--accent);color:var(--panel)}
 .btn.solid:focus-visible{outline-color:var(--accent)}
 
+/* たびチケ：出発案内板バナー（つくったものの最新作） */
+.dep{margin-top:24px;background:#10192E;color:#fff;border-radius:24px;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 230px;gap:28px;align-items:center;padding:30px 30px 30px 32px;box-shadow:0 14px 34px rgba(11,29,69,.28)}
+.dep::before{content:"";position:absolute;inset:0 0 auto 0;height:6px;background:repeating-linear-gradient(90deg,#FFC93C 0 22px,transparent 22px 34px)}
+.dep .tx{min-width:0;display:grid;gap:14px;justify-items:start}
+.dep-top{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.dep-plate{display:inline-flex;align-items:center;gap:8px;background:#FFC93C;color:#10192E;border-radius:5px;padding:5px 12px 5px 10px;font-family:var(--f-display);font-weight:800;font-size:14px;line-height:1;box-shadow:inset 0 -2px 0 rgba(0,0,0,.18)}
+.dep-plate svg{width:16px;height:16px}
+.dep-plate i{width:1px;height:13px;background:rgba(16,25,46,.35)}
+.dep-plate b{font-family:ui-monospace,Menlo,monospace;font-weight:700;letter-spacing:.12em;font-size:13px}
+.dep-new{font-family:ui-monospace,Menlo,monospace;font-weight:700;font-size:12px;letter-spacing:.12em;color:#FFC93C;display:inline-flex;align-items:center;gap:6px}
+.dep-new::before{content:"";width:7px;height:7px;border-radius:50%;background:#FFC93C;animation:depblink 1s steps(2,start) infinite}
+@keyframes depblink{to{visibility:hidden}}
+.dep-head{display:flex;justify-content:space-between;width:100%;font-family:ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.14em;color:rgba(255,255,255,.45);border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:6px}
+.flaps{display:flex;gap:6px}
+.flap{position:relative;width:62px;height:80px;display:grid;place-items:center;background:linear-gradient(#26345A 50%,#1E2B4B 50%);border-radius:8px;font-family:var(--f-display);font-weight:800;font-size:44px;color:#FFC93C;box-shadow:inset 0 -2px 0 rgba(0,0,0,.35)}
+.flap::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(16,25,46,.75)}
+.dep h3{margin:0;font-family:var(--f-display);font-weight:800;font-size:22px;line-height:1.5;color:#fff}
+.dep p{margin:0;color:rgba(255,255,255,.75);max-width:32em}
+.dep-feats{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.dep-feats li{font-size:13px;font-weight:700;color:#10192E;background:#fff;border-radius:999px;padding:3px 12px}
+.dep-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.btn.depart{background:#FF6B3D;color:#fff;border-color:#FF6B3D;box-shadow:0 8px 20px rgba(255,107,61,.35)}
+.btn.depart:focus-visible{outline-color:#FFC93C}
+.btn.dep-ghost{color:#fff;border-color:rgba(255,255,255,.35)}
+.dep-shot{position:relative;justify-self:center;width:100%;max-width:230px}
+.dep-shot img{display:block;width:100%;height:auto;border-radius:26px;border:6px solid #0A0F1E;box-shadow:0 18px 30px rgba(0,0,0,.45)}
+.dep-stamp{position:absolute;left:-26px;bottom:24px;width:84px;height:84px;border-radius:50%;border:3px solid #D7263D;box-shadow:inset 0 0 0 3px #10192E,inset 0 0 0 5px #D7263D;color:#FF5A6E;display:grid;place-content:center;text-align:center;font-family:ui-monospace,Menlo,monospace;font-weight:700;font-size:15px;line-height:1.1;transform:rotate(-14deg);background:rgba(16,25,46,.85)}
+.dep-stamp small{font-size:10px}
+@media (max-width:720px){
+  .dep{grid-template-columns:1fr;padding:28px 20px 24px}
+  .dep-shot{max-width:200px;grid-row:2}
+  .flap{width:52px;height:66px;font-size:36px}
+}
+@media (prefers-reduced-motion: reduce){.dep-new::before{animation:none}}
+
 /* note導線 */
 .note{margin-top:56px;background:var(--navy);color:var(--onNavy);border-radius:24px;padding:32px 24px;display:grid;gap:14px;justify-items:start;position:relative;overflow:hidden}
 .note .eyebrow{color:var(--gold)}
@@ -140,6 +175,27 @@ footer{padding-block:36px 40px;font-size:13px;color:var(--muted);text-align:cent
   <section class="blk" aria-labelledby="h-works">
     <p class="eyebrow">WORKS</p>
     <h2 id="h-works">つくったもの</h2>
+    <article class="dep" aria-labelledby="h-tabichike">
+      <div class="tx">
+        <div class="dep-top">
+          <span class="dep-plate"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2.5 19h19v2h-19zM22.07 9.64c-.21-.8-1.04-1.28-1.84-1.06L14.92 10l-6.9-6.43-1.93.51 4.14 7.17-4.97 1.33-1.97-1.54-1.45.39 2.59 4.49L21 11.49c.81-.23 1.28-1.05 1.07-1.85z"/></svg>出発<i></i><b>DEPARTURES</b></span>
+          <span class="dep-new">NEW · 開発部</span>
+        </div>
+        <div class="dep-head" aria-hidden="true"><span>DESTINATION</span><span>STATUS · ON SCHEDULE</span></div>
+        <div class="flaps" role="img" aria-label="たびチケ"><span class="flap">た</span><span class="flap">び</span><span class="flap">チ</span><span class="flap">ケ</span></div>
+        <h3 id="h-tabichike">旅のチケットを発券して、旅程も持ち物もまとめて準備。</h3>
+        <p>旅行ひとつが1枚の搭乗券に。出発までのカウントダウン、行った場所に押す「行った！」スタンプ、パスポート風のしおり。一緒に行く人とみんなで編集もできます。</p>
+        <ul class="dep-feats"><li>無料・登録不要</li><li>スタンプ</li><li>しおり印刷・PDF</li><li>みんなで編集</li></ul>
+        <div class="dep-cta">
+          <a class="btn depart" href="https://tabichike.chipshokai.com" target="_blank" rel="noopener">搭乗する（アプリを開く）→</a>
+          <a class="btn dep-ghost" href="https://tabichike.chipshokai.com/guide/" target="_blank" rel="noopener">使い方を見る</a>
+        </div>
+      </div>
+      <div class="dep-shot">
+        <img src="img/tabichike.jpg" alt="たびチケのホーム画面。紺色の出発案内板に行き先の京都と旅行の日数が出て、その下に搭乗券の形をした旅行のチケットが並んでいる" width="560" height="1084" loading="lazy">
+        <span class="dep-stamp" aria-hidden="true"><span>NEW<br><small>2026.10</small></span></span>
+      </div>
+    </article>
     <article class="work">
       <img src="img/vending.jpg" alt="プロンプト自販機のトップ画面。赤い自販機にやりたいことのボタンが並び、チップくんが「いらっしゃい！」と声をかけている" width="560" height="1085" loading="lazy">
       <div class="tx">
