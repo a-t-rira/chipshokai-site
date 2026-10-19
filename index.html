@@ -126,6 +126,16 @@ figcaption{font-size:13px;color:var(--muted);margin-top:8px}
 .sn b{font-family:var(--f-display);font-weight:800;font-size:16px}
 .sn small{font-size:13px;color:var(--muted);overflow-wrap:anywhere}
 .sn .go{color:var(--accent);font-weight:700}
+.sample-sites{padding-block:56px 8px}
+.sample-sites .desc{max-width:46em}
+.sample-site-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:24px}
+.sample-site-card{min-width:0;overflow:hidden;background:var(--panel);border:1px solid var(--line);border-radius:16px}
+.sample-site-card img{display:block;width:100%;height:auto;aspect-ratio:8/5;object-fit:cover;border-bottom:1px solid var(--line)}
+.sample-site-card .sample-site-copy{display:grid;gap:8px;padding:16px}
+.sample-site-card h3{margin:0;font:800 18px/1.4 var(--f-display)}
+.sample-site-card p{margin:0;color:var(--muted);font-size:13px}
+.sample-site-card a{justify-self:start;color:var(--accent);font-weight:700;text-decoration-thickness:1px;text-underline-offset:4px}
+.sample-site-note{margin:14px 0 0;color:var(--muted);font-size:12px}
 @media (prefers-reduced-motion: reduce){.sn{transition:none}.sn:hover{transform:none}}
 footer{padding-block:36px 40px;font-size:13px;color:var(--muted);text-align:center}
 
@@ -136,6 +146,8 @@ footer{padding-block:36px 40px;font-size:13px;color:var(--muted);text-align:cent
   .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,29,69,.35),rgba(11,29,69,.8))}
   .work{grid-template-columns:1fr}
   .work img{max-width:240px}
+  .sample-sites{padding-block:48px 8px}
+  .sample-site-grid{grid-template-columns:1fr;gap:12px}
 }
 @media (prefers-reduced-motion: reduce){.chip{animation:none}.btn{transition:none}.btn:hover{transform:none}}
 </style>
@@ -214,6 +226,27 @@ footer{padding-block:36px 40px;font-size:13px;color:var(--muted);text-align:cent
         <a class="btn solid" href="https://shindan.chipshokai.com" target="_blank" rel="noopener">診断をはじめる →</a>
       </div>
     </article>
+  </section>
+
+  <section class="sample-sites" aria-labelledby="h-sample-sites">
+    <p class="eyebrow">SAMPLE WEBSITES</p>
+    <h2 id="h-sample-sites">ホームページ制作の見本</h2>
+    <p class="desc">チップ商会でつくった、架空のお店のホームページです。お店の雰囲気に合わせて、写真・文字・動きを一から設計しています。</p>
+    <div class="sample-site-grid">
+      <article class="sample-site-card">
+        <img src="img/works/nail-atelier-tuu.webp" alt="nail atelier tuuのホームページ。白いネイルサロンのファーストビュー" width="800" height="500" loading="lazy">
+        <div class="sample-site-copy"><h3>nail atelier tuu</h3><p>ネイルサロン</p><a href="samples/nail/">サイトを見る →</a></div>
+      </article>
+      <article class="sample-site-card">
+        <img src="img/works/cafe-hakobera.webp" alt="珈琲と焼菓子 はこべらのホームページ。川辺の喫茶店のファーストビュー" width="800" height="500" loading="lazy">
+        <div class="sample-site-copy"><h3>珈琲と焼菓子 はこべら</h3><p>カフェ</p><a href="samples/cafe/">サイトを見る →</a></div>
+      </article>
+      <article class="sample-site-card">
+        <img src="img/works/seitai-soyogi.webp" alt="整体院 そよぎのホームページ。明るい整体院のファーストビュー" width="800" height="500" loading="lazy">
+        <div class="sample-site-copy"><h3>整体院 そよぎ</h3><p>整体院</p><a href="samples/seitai/">サイトを見る →</a></div>
+      </article>
+    </div>
+    <p class="sample-site-note">※掲載しているお店はすべて架空です。写真はUnsplash・Pexelsのものを使用しています。</p>
   </section>
 
   <section class="note" aria-labelledby="h-note">
