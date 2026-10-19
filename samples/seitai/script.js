@@ -32,8 +32,30 @@ const audience = document.querySelector("#area-audience");
 const method = document.querySelector("#area-method");
 const index = document.querySelector(".detail-index");
 const bodyIllustration = document.querySelector(".body-illustration");
+const bodyMap = document.querySelector(".body-map");
+
+function alignBodyPoints() {
+  const mapRect = bodyMap.getBoundingClientRect();
+  const svgMatrix = bodyIllustration.getScreenCTM();
+  if (!svgMatrix) return;
+
+  bodyButtons.forEach((button) => {
+    const zone = bodyIllustration.querySelector(`.zone-${button.dataset.area}`);
+    if (!zone) return;
+    const bounds = zone.getBBox();
+    const point = bodyIllustration.createSVGPoint();
+    point.x = bounds.x + bounds.width / 2;
+    point.y = bounds.y + bounds.height / 2;
+    const screenPoint = point.matrixTransform(svgMatrix);
+    button.style.left = `${screenPoint.x - mapRect.left}px`;
+    button.style.top = `${screenPoint.y - mapRect.top}px`;
+  });
+}
 
 bodyIllustration.dataset.activeArea = "neck";
+alignBodyPoints();
+window.addEventListener("resize", alignBodyPoints, { passive: true });
+new ResizeObserver(alignBodyPoints).observe(bodyMap);
 
 bodyButtons.forEach((button, position) => {
   button.addEventListener("click", () => {

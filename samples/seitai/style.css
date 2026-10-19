@@ -14,25 +14,15 @@
 @media(max-width:390px){.hero h1{font-size:31px}.hero-content{left:19px}.body-map{min-height:315px}.approach-photo{height:310px}.flow-list{gap:15px 8px}.access dl>div{grid-template-columns:72px 1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
 
-.photo-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding-top:0;padding-bottom:80px}.photo-strip figure{margin:0;height:260px;overflow:hidden}.photo-strip img{object-fit:cover}
-.faq h2{max-width:12em;text-wrap:pretty}
-@media(max-width:680px){.photo-strip{grid-template-columns:1fr 1fr;gap:10px;padding-bottom:55px}.photo-strip figure{height:160px}.photo-strip figure:last-child{display:none}}
+
 
 /* Refined body map illustration */
 .body-illustration{fill:none;stroke:#739995;stroke-width:1.15;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 10px 15px #24484a12)}.body-illustration .body-skin{fill:url(#bodyTone);stroke:#668c88;stroke-width:1.2}.body-illustration .body-contour{fill:none;stroke:#89aaa5;stroke-width:1.3}.body-illustration .body-spine{fill:none;stroke:#a3bfba;stroke-width:1.1;stroke-dasharray:2 5}.body-illustration .body-highlight{fill:none;stroke:#f8fbfa;stroke-width:3;opacity:.8}
 .body-map{background:radial-gradient(ellipse at 50% 45%,#fff 0,#eff5f3 54%,#e5efed 100%)}
 
-/* Align selectable areas to the connected body silhouette. */
-.body-map{--figure-h:86%;}
-.body-illustration{height:var(--figure-h);}
-.body-point{left:50%;top:var(--point-y);transform:translate(-50%,-50%);}
+/* Keep each button centered on its highlighted area. */
+.body-point{transform:translate(-50%,-50%);}
 .body-point:hover,.body-point:focus-visible,.body-point.is-active{transform:translate(-50%,-50%) scale(1.07);}
-.point-neck{--point-y:18%;}
-.point-shoulder{left:calc(50% + 18%);--point-y:29%;}
-.point-back{--point-y:43%;}
-.point-waist{left:calc(50% - 10%);--point-y:59%;}
-.point-pelvis{left:calc(50% + 8%);--point-y:67%;}
-@media(max-width:680px){.body-map{--figure-h:90%;}.point-neck{--point-y:17%;}.point-shoulder{left:calc(50% + 18%);--point-y:29%;}.point-back{--point-y:45%;}.point-waist{left:calc(50% - 10%);--point-y:61%;}.point-pelvis{left:calc(50% + 8%);--point-y:70%;}}
 
 .body-zones{pointer-events:none}.body-zone{fill:#d4a181;stroke:#c18a68;stroke-width:1.3;opacity:0;transition:opacity .24s ease}.body-illustration[data-active-area="neck"] .zone-neck,.body-illustration[data-active-area="shoulder"] .zone-shoulder,.body-illustration[data-active-area="back"] .zone-back,.body-illustration[data-active-area="waist"] .zone-waist,.body-illustration[data-active-area="pelvis"] .zone-pelvis{opacity:.38}
 @media(prefers-reduced-motion:reduce){.body-zone{transition:none}}

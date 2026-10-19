@@ -35,6 +35,8 @@
 
 | ファイル名 | 元ページURL | 撮影者 | サイト名 | ライセンス |
 |---|---|---|---|---|
-| samples/seitai/img/room.webp | https://unsplash.com/photos/black-and-white-massage-bed-4e017fuMeXE | Nightingale Home nurse | Unsplash | Unsplash License |
-| samples/seitai/img/treatment.webp | https://unsplash.com/photos/massage-therapist-giving-a-back-massage-7yeqemd-p90 | Jakub Klucký | Unsplash | Unsplash License |
 | samples/seitai/img/waiting.webp | https://www.pexels.com/photo/waiting-room-in-a-hospital-8459996/ | Los Muertos Crew | Pexels | Pexels License |
+| samples/seitai/img/clinic-room.webp | https://www.pexels.com/photo/special-medical-bed-desk-and-chairs-in-medical-cabinet-7789616/ | Ivan Babydov | Pexels | Pexels License |
+| samples/seitai/img/posture-check.webp | https://www.pexels.com/photo/woman-in-white-dress-up-shirt-touching-the-back-of-knees-of-woman-in-white-t-shirt-5793651/ | Yan Krukau | Pexels | Pexels License |
+| samples/seitai/img/back-care.webp | https://www.pexels.com/photo/physiotherapist-massaging-a-patients-back-20860601/ | Funkcinės Terapijos Centras | Pexels | Pexels License |
+| samples/seitai/img/manual-therapy.webp | https://www.pexels.com/photo/a-woman-with-white-top-pressing-on-a-person-s-crossed-legs-5794010/ | Yan Krukau | Pexels | Pexels License |
