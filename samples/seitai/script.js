@@ -31,6 +31,9 @@ const areaTitle = document.querySelector("#area-title");
 const audience = document.querySelector("#area-audience");
 const method = document.querySelector("#area-method");
 const index = document.querySelector(".detail-index");
+const bodyIllustration = document.querySelector(".body-illustration");
+
+bodyIllustration.dataset.activeArea = "neck";
 
 bodyButtons.forEach((button, position) => {
   button.addEventListener("click", () => {
@@ -43,6 +46,7 @@ bodyButtons.forEach((button, position) => {
       item.setAttribute("aria-pressed", String(active));
     });
 
+    bodyIllustration.dataset.activeArea = button.dataset.area;
     index.textContent = String(position + 1).padStart(2, "0");
     areaTitle.textContent = content.title;
     audience.textContent = content.audience;

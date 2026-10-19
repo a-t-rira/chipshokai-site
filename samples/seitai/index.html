@@ -33,12 +33,28 @@
       <figure class="intro-image"><img src="img/waiting.webp" width="1200" height="800" alt="明るい待合に並ぶ落ち着いた青色の椅子" loading="lazy"><figcaption>お待ちいただく時間も、ゆっくりと。</figcaption></figure>
     </section>
 
+    <section class="photo-strip section-shell" aria-label="院内の写真"><figure><img src="img/towel.jpeg" alt="清潔な白いタオル" loading="lazy"></figure><figure><img src="img/room-detail.jpeg" alt="落ち着いた施術室の一角" loading="lazy"></figure><figure><img src="img/plants.jpeg" alt="院内に飾られた観葉植物" loading="lazy"></figure></section>
+
     <section class="care section-shell" id="care" aria-labelledby="care-title">
       <div class="section-label"><span>CHECK IN WITH YOUR BODY</span><b>02</b></div>
       <div class="care-heading"><div><p class="kicker">気になるところを選んでください</p><h2 id="care-title">からだの図から、<br>相談する場所を。</h2></div><p>場所を押すと、よく伺うお悩みと施術の内容をご覧いただけます。<br>一つに決めず、気になるところをいくつ選んでも大丈夫です。</p></div>
       <div class="body-card">
         <div class="body-map" aria-label="からだの部位を選ぶ図">
-          <svg class="body-illustration" viewBox="0 0 300 520" role="img" aria-labelledby="body-svg-title body-svg-desc"><title id="body-svg-title">からだの図</title><desc id="body-svg-desc">首、肩、背中、腰、骨盤まわりを選択できます。</desc><circle cx="150" cy="58" r="31"/><path d="M133 94 Q150 105 167 94 L178 122 Q207 129 220 158 L234 240 Q230 253 219 246 L198 180 L199 278 Q196 304 185 322 L197 454 Q199 474 182 476 Q166 476 163 458 L151 350 L137 458 Q134 476 118 476 Q101 474 104 454 L116 322 Q104 304 101 278 L102 180 L81 246 Q70 253 66 240 L80 158 Q93 129 122 122Z"/><path class="body-line" d="M120 127 Q150 145 180 127 M103 188 Q150 208 197 188 M116 280 Q150 295 184 280 M114 320 Q150 337 186 320"/></svg>
+          <svg class="body-illustration" viewBox="0 0 300 520" role="img" aria-labelledby="body-svg-title body-svg-desc">
+            <title id="body-svg-title">Body area map</title><desc id="body-svg-desc">Select an area of the back to see details.</desc>
+            <defs><linearGradient id="bodyTone" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e7f0ed"/><stop offset="1" stop-color="#bfd5d0"/></linearGradient></defs>
+            <path class="body-skin" d="M150 18c-17 0-29 13-29 31 0 13 6 24 15 30l-1 14-19 7c-17 6-29 17-36 33l-27 67c-5 12-1 23 8 27 9 4 16-2 21-13l20-43-4 76c-1 18 3 32 11 45l-8 93c-1 14 5 22 15 23 10 1 16-6 18-18l15-79 15 79c2 12 8 19 18 18 10-1 16-9 15-23l-8-93c8-13 12-27 11-45l-4-76 20 43c5 11 12 17 21 13 9-4 13-15 8-27l-27-67c-7-16-19-27-36-33l-19-7-1-14c9-6 15-17 15-30 0-18-12-31-29-31z"/>
+            <g class="body-zones" aria-hidden="true">
+              <ellipse class="body-zone zone-neck" cx="150" cy="91" rx="17" ry="14"/>
+              <ellipse class="body-zone zone-shoulder" cx="150" cy="128" rx="54" ry="19"/>
+              <ellipse class="body-zone zone-back" cx="150" cy="211" rx="35" ry="43"/>
+              <ellipse class="body-zone zone-waist" cx="150" cy="278" rx="28" ry="22"/>
+              <ellipse class="body-zone zone-pelvis" cx="150" cy="318" rx="38" ry="23"/>
+            </g>
+            <path class="body-contour" d="M138 102c-10 9-18 22-22 39-4 17-4 37-1 57l7 47c2 14-1 30-7 44m47-187c10 9 18 22 22 39 4 17 4 37 1 57l-7 47c-2 14 1 30 7 44M116 139c11 10 22 15 34 15s23-5 34-15M101 191c15 10 31 15 49 15s34-5 49-15M111 285c12 7 25 11 39 11s27-4 39-11M113 321c11 7 23 10 37 10s26-3 37-10M122 358l-3 48m59-48 3 48"/>
+            <path class="body-spine" d="M150 123v205"/>
+            <path class="body-highlight" d="M129 112c-11 14-17 33-17 56m59-56c11 14 17 33 17 56M126 244c6 7 14 10 24 10s18-3 24-10"/>
+          </svg>
           <button class="body-point point-neck is-active" type="button" data-area="neck" aria-pressed="true"><span>首</span></button>
           <button class="body-point point-shoulder" type="button" data-area="shoulder" aria-pressed="false"><span>肩</span></button>
           <button class="body-point point-back" type="button" data-area="back" aria-pressed="false"><span>背中</span></button>
@@ -57,7 +73,7 @@
 
     <section class="faq section-shell" id="faq" aria-labelledby="faq-title"><div class="section-label"><span>QUESTIONS</span><b>05</b></div><div class="faq-grid"><div><p class="kicker">よくあるご質問</p><h2 id="faq-title">気になることを、<br>先におたずねください。</h2><p class="faq-aside">ほかにも気になる点があれば、ご予約時にお知らせください。</p></div><div class="faq-list"><details><summary>どんな服装で行けばよいですか？</summary><p>動きやすい服装がおすすめです。着替えが必要な場合は、院内の簡単な着替えをご利用いただけます（見本）。</p></details><details><summary>強い刺激や痛みが苦手です。</summary><p>強く押すことを前提にしていません。施術中も力加減を確認しますので、気になったらすぐお伝えください。</p></details><details><summary>どれくらいの頻度で通うものですか？</summary><p>決まった回数や頻度の指定はありません。次回については、ご自身の希望や暮らしの予定に合わせてご検討ください。</p></details><details><summary>予約の変更やキャンセルはできますか？</summary><p>変更をご希望の際は、分かった時点でLINEまたはお電話からご連絡ください。見本の連絡先です。</p></details><details><summary>支払い方法を教えてください。</summary><p>現金・クレジットカード・QR決済に対応しています（見本）。</p></details><details><summary>子どもを連れて行けますか？</summary><p>お子さま連れでの来院もご相談いただけます。安全のため、予約時に年齢と人数をお知らせください。</p></details></div></div></section>
 
-    <section class="access" id="access" aria-labelledby="access-title"><div class="access-inner"><div class="access-copy"><p class="eyebrow">FIND US IN MIDORICHO</p><h2 id="access-title">緑町の、<br>静かな一室で。</h2><dl><div><dt>住所</dt><dd>サンプル市緑町7-8-9</dd></div><div><dt>アクセス</dt><dd>サンプル駅 南口から徒歩6分</dd></div><div><dt>営業時間</dt><dd>10:00〜20:00（最終受付 19:00）</dd></div><div><dt>お休み</dt><dd>木曜日・日曜日</dd></div><div><dt>駐車場</dt><dd>2台（無料・見本）</dd></div><div><dt>お支払い</dt><dd>現金・カード・QR決済</dd></div></dl><a class="map-link" href="#access">地図を見る（見本） <span aria-hidden="true">↗</span></a></div><div class="access-photo"><img src="img/waiting.webp" width="1200" height="800" alt="窓から光が入る待合スペース" loading="lazy"><span>住宅街の中にある小さな整体院</span></div></div></section>
+    <section class="access" id="access" aria-labelledby="access-title"><div class="access-inner"><div class="access-copy"><p class="eyebrow">FIND US IN MIDORICHO</p><h2 id="access-title">緑町の、<br>静かな一室で。</h2><dl><div><dt>住所</dt><dd>サンプル市緑町7-8-9</dd></div><div><dt>アクセス</dt><dd>サンプル駅 南口から徒歩6分</dd></div><div><dt>営業時間</dt><dd>10:00〜20:00（最終受付 19:00）</dd></div><div><dt>お休み</dt><dd>木曜日・日曜日</dd></div><div><dt>駐車場</dt><dd>2台（無料・見本）</dd></div><div><dt>お支払い</dt><dd>現金・カード・QR決済</dd></div></dl><a class="map-link" href="#access">地図を見る（見本） <span aria-hidden="true">↗</span></a></div><div class="access-photo"><img src="img/test.jpeg" width="1200" height="800" alt="窓から光が入る待合スペース" loading="lazy"><span>住宅街の中にある小さな整体院</span></div></div></section>
 
     <section class="reserve" id="reserve" aria-labelledby="reserve-title"><div><p class="eyebrow">TAKE A MOMENT FOR YOURSELF</p><h2 id="reserve-title">相談からでも、<br>お気軽にどうぞ。</h2><p>ご希望の日時や気になることをお聞かせください。</p><div class="reserve-actions"><a class="button button-dark" href="#reserve">LINEで予約する（見本） <span aria-hidden="true">↗</span></a><a class="reserve-phone" href="#reserve">電話で相談する（見本）<b>000-0000-0000</b></a></div></div><img src="img/room.webp" width="1400" height="933" alt="窓辺に置かれた施術ベッドと白いタオル" loading="lazy"></section>
   </main>
