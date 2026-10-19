@@ -85,3 +85,23 @@
  .booking h2{font-size:38px;letter-spacing:.04em}
 }
 @media(prefers-reduced-motion:reduce){.gallery-stage{position:relative;height:auto!important;min-height:0}.gallery-track{transform:none!important}.gallery-window{overflow-x:auto}.gallery-progress{display:none}}
+
+/* Readability and small-screen composition */
+@media(min-width:801px){
+ .concept-note{font-size:16px;line-height:2}.promise-item p,.flow-list p{font-size:15px}
+ .design-card>p,.menu-heading>p:last-child,.menu-row p,.menu-extras div,.first-visit,.shape-intro>p:last-child,.shape p,.access-table>div,.booking>p:not(.eyebrow){font-size:15px}
+ .gallery-footnote,.booking>small{font-size:14px}.flow-section{display:block}.flow-heading{text-align:center;position:static}
+ .flow-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:48px;border:0}
+ .flow-list li{display:block;padding:22px 15px;border-top:1px solid var(--line);border-bottom:0}.flow-list li>span{display:block;font-size:35px;margin-bottom:16px}.flow-list li>div{min-width:0}
+}
+@media(max-width:800px){
+ .nav-main{display:none}.hero-photo{object-position:50% 58%}
+ .concept-note{font-size:14px;line-height:2}.promise-item p,.flow-list p,.design-card>p,.menu-heading>p:last-child,.menu-row p,.menu-extras div,.first-visit,.shape-intro>p:last-child,.shape p,.access-table>div,.booking>p:not(.eyebrow){font-size:14px}
+ .gallery-footnote,.booking>small{font-size:14px}.flow-section{display:block}.flow-heading{text-align:left}
+ .flow-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:24px;border:0}
+ .flow-list li{display:block;padding:17px 10px;border-top:1px solid var(--line);border-bottom:0}.flow-list li>span{display:block;font-size:28px;margin-bottom:9px}.flow-list li>div{min-width:0}
+ .flow-list h3{font-size:14px}.flow-list p{line-height:1.8}.gallery-footnote{padding-left:25px;padding-right:25px}
+ .shape p{line-height:1.6}.access-table>div{font-size:14px}.site-footer p span{font-size:10px}.site-footer>small{font-size:11px}
+ .back-top{font-size:12px}.header-book{font-size:13px}.hero-kicker,.eyebrow{font-size:10px}.map-link{font-size:13px}.booking-actions a{font-size:14px}
+}
+@media(max-width:390px){.nav-main{display:none}.hero{height:calc(78svh - 65px);min-height:510px;max-height:690px}}
